@@ -1,0 +1,11 @@
+{
+    "texture_name": "atlas.terrain",
+    "resource_pack_name": "gravestones",
+    "padding": 8,
+    "num_mip_levels": 4,
+    "texture_data": {
+        "default_gravestone": {
+            "textures": "textures/blocks/default_gravestone"
+        }
+    }
+}

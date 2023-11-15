@@ -1,0 +1,7 @@
+{
+    "format_version": [1, 1, 0],
+    "gravestones:default_gravestone": {
+        "textures": "default_gravestone",
+        "sound": "stone"
+    }
+}
