@@ -7,6 +7,38 @@
                 "category": "nature"
             }
         },
+        "traits": {
+            "minecraft:placement_direction": {
+                "enabled_states": ["minecraft:cardinal_direction"],
+                "y_rotation_offset": 180
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 90, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 180, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, -90, 0] }
+                }
+            }
+        ],
         "components": {
             "minecraft:display_name": "tile.gravestones_default_gravestone.name",
             "minecraft:geometry": "geometry.gravestones_default_gravestone",
@@ -19,8 +51,7 @@
             "minecraft:destructible_by_explosion": false,
             "minecraft:material_instances": {
                 "*": {
-                    "texture": "default_gravestone",
-                    "render_method": "alpha_test"
+                    "render_method": "opaque"
                 }
             }
         }
