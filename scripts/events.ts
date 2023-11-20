@@ -4,8 +4,14 @@ import {
 	EntityDieAfterEvent,
 	EntityInventoryComponent,
 	Player,
+	WorldAfterEvents,
 	world
 } from "@minecraft/server";
+
+// @ts-ignore
+function onWorldInitialize(event) {
+	// TODO
+}
 
 function onDeathAfter(event: EntityDieAfterEvent): void{
 	if (!(event.deadEntity instanceof Player)) return;
@@ -24,6 +30,7 @@ function onDeathAfter(event: EntityDieAfterEvent): void{
 	if (!block) return;
 	block.setPermutation(BlockPermutation.resolve("gravestones:default_gravestone"));
 	const entity = dimension.spawnEntity("minecraft:slime", location);
+	block.
 	const grave_inventory = block.getComponent(BlockInventoryComponent.componentId) as BlockInventoryComponent;
 	player.sendMessage(grave_inventory ? "grave_inventory exists" : "grave_inventory doesn't exists");
 }
